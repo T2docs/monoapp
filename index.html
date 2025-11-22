@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon App</title>
+
+  <!-- Lien vers le manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Couleurs affichées autour de l'app -->
+  <meta name="theme-color" content="#000000">
+
+</head>
+<body>
+  <h1>Bienvenue dans mon application</h1>
+  <p>Voici mes fichiers et raccourcis :</p>
+
+  <ul>
+    <li><a href="https://google.com" target="_blank">Google</a></li>
+    <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+    <li><a href="documents/mon_fichier.pdf" target="_blank">Mon fichier PDF</a></li>
+  </ul>
+
+  <script>
+    // Enregistrement du service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
